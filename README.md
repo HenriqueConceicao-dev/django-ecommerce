@@ -12,7 +12,11 @@ The project is being developed incrementally while studying and applying Django 
 
 - Initial Django project configuration
 - Store application structure
-- Development server setup
+- URL routing separated between project and store application
+- Initial pages for home, store, cart, checkout, account, and login
+- Shared base template using Django template inheritance
+- Static files configuration
+- Initial CSS integration
 
 ## Technologies
 
