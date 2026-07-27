@@ -17,6 +17,7 @@ The project is being developed incrementally while studying and applying Django 
 - Shared base template using Django template inheritance
 - Static files configuration
 - Initial CSS integration
+- Reusable navigation template included in the base layout
 
 ## Technologies
 
