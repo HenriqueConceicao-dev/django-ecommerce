@@ -18,6 +18,11 @@ The project is being developed incrementally while studying and applying Django 
 - Static files configuration
 - Initial CSS integration
 - Reusable navigation template included in the base layout
+- Initial database models and relationships
+- Django Admin integration for store data management
+- Product image upload and media files configuration
+- Dynamic product listing using Django ORM
+- Database content rendered through views and templates
 
 ## Technologies
 

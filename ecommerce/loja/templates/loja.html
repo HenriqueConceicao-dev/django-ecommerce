@@ -5,4 +5,10 @@
 
 {%block body%}
     <h1>Pagina de Loja</h1>
+    {% for produto in produtos %}
+        <p>{{produto.nome}}</p>
+        <p>R${{produto.preco}}</p>
+        <img src="{{produto.imagem.url}}" alt="calça" width="300px" height="300px">
+    {% endfor%}
+
 {%endblock%}
