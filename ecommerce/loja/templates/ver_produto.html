@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{%block titulo%}Loja - Produto{%endblock%}
+
+{%block body%}
+    <h1>Pagina de {{produto.nome}}</h1>
+    <p>{{produto.nome}}</p>
+    <p>R${{produto.preco}}</p>
+    <a href=""><img src="{{produto.imagem.url}}" alt="calça" width="300px" height="300px"></a>
+    
+    <button>Adicionar Carrinho</button>
+
+{%endblock%}

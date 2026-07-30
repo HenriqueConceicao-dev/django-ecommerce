@@ -71,3 +71,10 @@ class ItemPedido(models.Model):
     item_estoque = models.ForeignKey(Pedido, on_delete=models.SET_NULL, null=True, blank=True)
 #----------------- FIM  PEDIDO
 
+class Banner(models.Model):
+     imagem = models.ImageField(null=True, blank=True)
+     link_destino = models.CharField(max_length=255, null=True, blank=True)
+     ativo = models.BooleanField(default=False)
+
+     def __str__(self):
+          return str(f"{self.link_destino} - {self.ativo}")

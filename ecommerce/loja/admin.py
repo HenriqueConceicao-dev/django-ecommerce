@@ -15,4 +15,6 @@ admin.site.register(Pedido)
 
 admin.site.register(ItemPedido)
 
+admin.site.register(Banner)
+
 
