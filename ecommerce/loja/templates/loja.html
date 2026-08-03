@@ -8,7 +8,7 @@
     {% for produto in produtos %}
         <p>{{produto.nome}}</p>
         <p>R${{produto.preco}}</p>
-        <a href="{% url 'ver_produto'%}"><img src="{{produto.imagem.url}}" alt="calça" width="300px" height="300px"></a>
+        <a href="{% url 'ver_produto' produto.id %}"><img src="{{produto.imagem.url}}" alt="calça" width="300px" height="300px"></a>
     {% endfor%}
 
 {%endblock%}

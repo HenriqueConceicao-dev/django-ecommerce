@@ -8,6 +8,7 @@ admin.site.register(Categoria)
 admin.site.register(Tipo)
 admin.site.register(Produto)
 
+admin.site.register(Cor)
 admin.site.register(ItemEstoque)
 admin.site.register(Endereco)
 admin.site.register(Pedido)
@@ -16,5 +17,7 @@ admin.site.register(Pedido)
 admin.site.register(ItemPedido)
 
 admin.site.register(Banner)
+
+
 
 

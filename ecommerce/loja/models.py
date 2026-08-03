@@ -40,11 +40,21 @@ class Produto(models.Model):
 #----------------- FIM  PRODUTO
 
 #-------------- TABELA RELECIONADO A PEDIDO
+class Cor(models.Model):
+    nome = models.CharField(max_length=255, null=True, blank=True)
+    hex_cor = models.CharField(max_length=8, null=True, blank=True)
+
+    def __str__(self):
+        return str(self.nome)
+    
 class ItemEstoque(models.Model):
     produto = models.ForeignKey(Produto, on_delete=models.SET_NULL, null=True, blank=True )
-    cor = models.CharField(max_length=255, null=True, blank=True)
+    cor = models.ForeignKey(Cor, on_delete=models.SET_NULL, null=True, blank=True )
     tamanho = models.CharField(max_length=255, null=True, blank=True)
     quantidade = models.IntegerField(default=0)
+
+    def __str__(self):
+            return f"{self.produto.nome} || {self.cor} || {self.tamanho} - QTDE: {self.quantidade}"
 
 class Endereco(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)

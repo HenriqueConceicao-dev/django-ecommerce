@@ -23,6 +23,10 @@ The project is being developed incrementally while studying and applying Django 
 - Product image upload and media files configuration
 - Dynamic product listing using Django ORM
 - Database content rendered through views and templates
+- Product color and size variations
+- Stock-based availability filtering
+- Dynamic color selection using hexadecimal values
+- Available sizes filtered by selected color
 
 ## Technologies
 

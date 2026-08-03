@@ -5,10 +5,36 @@
 
 {%block body%}
     <h1>Pagina de {{produto.nome}}</h1>
-    <p>{{produto.nome}}</p>
-    <p>R${{produto.preco}}</p>
-    <a href=""><img src="{{produto.imagem.url}}" alt="calça" width="300px" height="300px"></a>
-    
-    <button>Adicionar Carrinho</button>
+
+    {% if tem_estoque %}
+        <p>{{produto.nome}}</p>
+        <a href=""><img src="{{produto.imagem.url}}" alt="calça" width="300px" height="300px"></a>
+        <hr>
+
+        <p>R${{produto.preco}}</p>
+
+        {% if nome_cor_selecionada%}
+            Cor: {{nome_cor_selecionada}}
+        {% endif %}
+
+        <hr>
+        {% for cor in cores%}
+           {{cor.nome}} - <a href="{% url 'ver_produto' produto.id cor.id %}"><i class="fa-solid fa-circle" style="color: {{cor.hex_cor}};"></i></a>
+        {%endfor%}
+        <hr>
+        {% if tem_estoque %}
+            <h3>Selecione o tamanho</h3>
+            {% for tamanho in tamanhos%}
+                <button>{{tamanho}}</button>
+            {%endfor%}
+        {% endif%}
+
+        
+        <hr>
+        <button>Adicionar Carrinho</button>
+
+    {% else %}
+        <p>Produto Indisponivel.</p>
+    {% endif %}
 
 {%endblock%}
