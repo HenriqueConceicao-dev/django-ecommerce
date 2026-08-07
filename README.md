@@ -27,6 +27,11 @@ The project is being developed incrementally while studying and applying Django 
 - Stock-based availability filtering
 - Dynamic color selection using hexadecimal values
 - Available sizes filtered by selected color
+- Initial add-to-cart flow using POST requests
+- Product color and size submission through forms
+- CSRF protection for cart forms
+- Global cart context processor
+- Cart item counter displayed in the navigation bar
 
 ## Technologies
 
